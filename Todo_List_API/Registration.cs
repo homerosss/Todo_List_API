@@ -14,11 +14,6 @@ namespace Todo_List_API
             _users = new User[10];
         }
 
-        public void StartRegistration()
-        {
-            RegistrationUsername(Name);
-        }
-
         public void RegistrationUsername(User username)
         {
             if(username == null) throw new ArgumentNullException("Username is null");
@@ -28,6 +23,7 @@ namespace Todo_List_API
 
             int index = GetEmptyIndex(username);
             _users[index] = username;
+            Console.WriteLine($"Registration Successs");
         }
 
         public bool UsernameExist(string username)
