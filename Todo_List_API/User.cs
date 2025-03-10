@@ -12,10 +12,5 @@ namespace Todo_List_API
         private string _name;
         private string _email;
         private string _password;
-        
-        //Testing user
-        //zdratka
-        //xello
-        //baro abro
     }
 }
