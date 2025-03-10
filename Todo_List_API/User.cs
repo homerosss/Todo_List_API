@@ -9,6 +9,8 @@ namespace Todo_List_API
     internal class User
     {
         private string _id;
+        private string _name;
+        private string _email;
 
     }
 }
