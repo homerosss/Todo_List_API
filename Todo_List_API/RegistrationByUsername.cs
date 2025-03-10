@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Todo_List_API
 {
-    internal class UserRegistration : BaseRegistration
+    internal class RegistrationByUsername : BaseRegistration
     {
         private static User[]? _users; 
-        public UserRegistration()
+        public RegistrationByUsername()
         {
             _users = new User[10];
         }
