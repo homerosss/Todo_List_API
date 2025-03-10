@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Todo_List_API
 {
-    internal class AuthenthicationUser
+    internal class BaseRegistration : User
     {
+        // TODO: make abstract class
     }
 }
