@@ -18,15 +18,20 @@ namespace Todo_List_API
         {
             if(username == null) throw new ArgumentNullException("Username is null");
             if (username.Name.Length == 0) throw new ArgumentException($"Username must be minimum 6 letters");
-            if (isFull) throw new ArgumentNullException();
+            if (IsFull()) throw new SemaphoreFullException("List is full");
+            if (UsernameExist(username.Name)) throw new ArgumentException("Username already exists");
 
             int index = GetEmptyIndex(username);
             _users[index] = username;
         }
 
-        public void UsernameExist(User username)
+        public bool UsernameExist(string username)
         {
-
+            while (true)
+            {
+                if(username == Name) return true;
+                else { return false; }
+            }
         }
 
         public int GetIndexByUsername(string username)
@@ -54,7 +59,7 @@ namespace Todo_List_API
             return -1;
         }
 
-        private bool isFull()
+        private bool IsFull()
         {
             for(int i = 0; i < _users.Length; i++)
             {
