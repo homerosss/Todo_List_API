@@ -11,6 +11,7 @@ namespace Todo_List_API
         private string _id;
         private string _name;
         private string _email;
+        private string _password;
 
     }
 }
