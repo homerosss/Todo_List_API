@@ -6,8 +6,11 @@
         {
             User user = new User();
             Console.WriteLine("Registration\nPlease enter username: ");
-            string firstUser = Console.ReadLine();
+            string? firstUser = Console.ReadLine();
             
+
+            Registration registration = new Registration();
+            registration.RegistrationUsername(user, firstUser);
         }
     }
 }

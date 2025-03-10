@@ -14,6 +14,11 @@ namespace Todo_List_API
             _users = new User[10];
         }
 
+        public void StartRegistration()
+        {
+            RegistrationUsername(Name);
+        }
+
         public void RegistrationUsername(User username)
         {
             if(username == null) throw new ArgumentNullException("Username is null");
