@@ -8,19 +8,62 @@ namespace Todo_List_API
 {
     internal class Registration : User
     {
-        public Registration(string name, string email, string password) : base (name, email, password)
+        private User[]? _users; 
+        public Registration()
         {
-            
+            _users = new User[10];
         }
 
-        public string RegistrationUsername(string username)
+        public void RegistrationUsername(User username)
         {
-            throw new ArgumentException();
+            if(username == null) throw new ArgumentNullException("Username is null");
+            if (username.Name.Length == 0) throw new ArgumentException($"Username must be minimum 6 letters");
+            if (isFull) throw new ArgumentNullException();
+
+            int index = GetEmptyIndex(username);
+            _users[index] = username;
         }
 
-        public string UsernameExist()
+        public void UsernameExist(User username)
         {
-            throw new ArgumentException();
+
+        }
+
+        public int GetIndexByUsername(string username)
+        {
+            for(int i = 0; i < _users.Length; i++)
+            {
+                if (_users[i].Name == username)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        public int GetEmptyIndex(User userName)
+        {
+            for(int i = 0; i < _users.Length; i++)
+            {
+                if (_users[i] == null)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        private bool isFull()
+        {
+            for(int i = 0; i < _users.Length; i++)
+            {
+                if (_users[i] != null)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
