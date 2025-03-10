@@ -8,6 +8,13 @@ namespace Todo_List_API
 {
     internal class ValidateUser
     {
-
+        public ValidateUser() { }
+        public ValidateUser(string text)
+        {
+            if (text == null)
+            {
+                throw new ArgumentNullException(nameof(text));
+            }
+        }
     }
 }
