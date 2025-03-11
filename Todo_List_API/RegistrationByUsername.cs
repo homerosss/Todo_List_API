@@ -68,7 +68,5 @@ namespace Todo_List_API
         {
             return GetEmptyIndex() == -1;
         }
-
-
     }
 }
