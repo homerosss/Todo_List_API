@@ -46,7 +46,7 @@ namespace Todo_List_API
             return -1;
         }
 
-        private static User? GetUserByUsername(string username)
+        public static User? GetUserByUsername(string username)
         {
             int index = GetIndexByUsername(username);
             return index != -1 ? _users[index] : null;

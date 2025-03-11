@@ -11,9 +11,20 @@ namespace Todo_List_API
         public ValidateUser() { }
         public ValidateUser(string text)
         {
-            if (text == null)
+            try
             {
-                throw new ArgumentNullException(nameof(text));
+                if (text == null)
+                {
+                    throw new ArgumentNullException(nameof(text));
+                }
+            }
+            catch (Exception error)
+            {
+                throw new Exception(error.Message, error);
+            }
+            finally
+            {
+                Console.WriteLine();
             }
         }
     }
