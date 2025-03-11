@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Todo_List_API
 {
-    internal class UserLogin : UserRegistrationByUsername
+    internal class UserLogin : RegistrationByUsername
     {
         private static User?[] _users = new User?[10];
         public static bool Login(string username, string password)
