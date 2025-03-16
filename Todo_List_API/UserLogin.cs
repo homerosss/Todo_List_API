@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Todo_List_API
 {
-    internal class UserLogin : User
+    internal class UserLogin : Registration
     {
-        // TODO: user login
+        public static void Access(User user)
+        {
+            ValidateUser.IfUserRegistered(user);
+            Console.WriteLine("Welcome");
+        }
     }
 }

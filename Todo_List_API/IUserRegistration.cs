@@ -8,6 +8,5 @@ namespace Todo_List_API
 {
     public interface IUserRegistration
     {
-         abstract void RegistrationSuccess(User username);
     }
 }

@@ -6,25 +6,54 @@ using System.Threading.Tasks;
 
 namespace Todo_List_API
 {
-    internal class ValidateUser
+    public class ValidateUser : Registration
     {
-        public ValidateUser() { }
-        public ValidateUser(string text)
+        public static void IfExists(User user)
         {
-            try
+            foreach (var existedUsers in _users)
             {
-                if (text == null)
+                if (user.Name == existedUsers.Name)
                 {
-                    throw new ArgumentNullException(nameof(text));
+                    throw new Exception($"User with Username: {user.Name} already exists");
+                }
+                if (user.Email == existedUsers.Email)
+                {
+                    throw new Exception($"User with E-Mail: {user.Email} already exists");
+                }
+                if (user.Id == existedUsers.Id)
+                {
+                    throw new Exception($"User with ID: '{user.Id}' already exists");
+                }
+                if(user?.Password?.Length > 15 && user.Password.Length < 4)
+                {
+                    throw new Exception($"Enter password correctly");
                 }
             }
-            catch (Exception error)
+        }
+
+        public static void IfUserRegistered(User users)
+        {
+            foreach (var registered in _users)
             {
-                throw new Exception(error.Message, error);
-            }
-            finally
-            {
-                Console.WriteLine();
+                while(registered != null)
+                {
+                    if (registered.Name == users.Name)
+                    {
+
+                    }
+                }
+                if (registered.Name != users.Name)
+                {
+                    throw new ArgumentException($"User with Name: {users.Name} can't found");
+                }
+                if(registered.Email != users.Email)
+                {
+                    throw new ArgumentException($"User with Name: {users.Email} can't found");
+                }
+                if(registered.Password != users.Password)
+                {
+                    throw new ArgumentException($"Password incorrect");
+                }
             }
         }
     }

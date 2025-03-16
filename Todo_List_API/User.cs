@@ -29,7 +29,6 @@ namespace Todo_List_API
             Name = username;
             Email = email;
             Password = password;
-
         }
     }
 }

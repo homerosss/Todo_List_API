@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace Todo_List_API
 {
-    public abstract class BaseRegistration :  User , IUserRegistration
+    public class Registration : User 
     {
         protected static List<User> _users = new List<User>();
 
-        public BaseRegistration()
+        public Registration()
         {
-            int x;
         }
-
-        public abstract void RegistrationSuccess(User username);
+        
+        public static void RegistrationSuccess(User username)
+        {
+            ValidateUser.IfExists(username);
+            _users.Add(username);
+        }
     }
 }

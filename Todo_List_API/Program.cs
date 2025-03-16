@@ -5,13 +5,12 @@
         static void Main(string[] args)
         {
             User user = new User(1, "homeross", "davit.makhareishvili@gmail.com", "davitaa");
-            User user1 = new User(1, "test", "rati", "dato");
-            IUserRegistration regisration = new RegistrationByUsername();
-            regisration.RegistrationSuccess(user);
-            regisration = new RegistrationByID();
-            regisration.RegistrationSuccess(user);
-            regisration = new RegistrationByEmail();
-            regisration.RegistrationSuccess(user);
+            User user1 = new User(2, "homerosss", "davit.makhareishvili@mail.ru", "dato");
+
+            Registration.RegistrationSuccess(user1);
+            Registration.RegistrationSuccess(user);
+            UserLogin.Access(user);
+            UserLogin.Access(user1);
         }
     }
 }
