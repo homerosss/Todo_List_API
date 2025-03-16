@@ -8,9 +8,9 @@
             User user1 = new User(2, "homerosss", "davit.makhareishvili@mail.ru", "dato");
 
             Registration.RegistrationSuccess(user1);
+            UserLogin.Access(user1);
             Registration.RegistrationSuccess(user);
             UserLogin.Access(user);
-            UserLogin.Access(user1);
         }
     }
 }

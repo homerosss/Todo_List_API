@@ -12,19 +12,19 @@ namespace Todo_List_API
         {
             foreach (var existedUsers in _users)
             {
-                if (user.Name == existedUsers.Name)
+                if (user?.Name == existedUsers.Name)
                 {
-                    throw new Exception($"User with Username: {user.Name} already exists");
+                    throw new Exception($"User with Username: {user?.Name} already exists");
                 }
-                if (user.Email == existedUsers.Email)
+                if (user?.Email == existedUsers.Email)
                 {
-                    throw new Exception($"User with E-Mail: {user.Email} already exists");
+                    throw new Exception($"User with E-Mail: {user?.Email} already exists");
                 }
-                if (user.Id == existedUsers.Id)
+                if (user?.Id == existedUsers.Id)
                 {
-                    throw new Exception($"User with ID: '{user.Id}' already exists");
+                    throw new Exception($"User with ID: '{user?.Id}' already exists");
                 }
-                if(user?.Password?.Length > 15 && user.Password.Length < 4)
+                if(user?.Password?.Length > 15 && user?.Password.Length < 4)
                 {
                     throw new Exception($"Enter password correctly");
                 }
@@ -33,27 +33,18 @@ namespace Todo_List_API
 
         public static void IfUserRegistered(User users)
         {
+            bool isFound = false;
             foreach (var registered in _users)
             {
-                while(registered != null)
+                if(registered.Name == users.Name && registered.Email == users.Email && registered.Password == users.Password)
                 {
-                    if (registered.Name == users.Name)
-                    {
-
-                    }
+                    isFound = true;
                 }
-                if (registered.Name != users.Name)
-                {
-                    throw new ArgumentException($"User with Name: {users.Name} can't found");
-                }
-                if(registered.Email != users.Email)
-                {
-                    throw new ArgumentException($"User with Name: {users.Email} can't found");
-                }
-                if(registered.Password != users.Password)
-                {
-                    throw new ArgumentException($"Password incorrect");
-                }
+                else { isFound = false; }
+            }
+            if (!isFound)
+            {
+                throw new ArgumentException($"Username: {users.Name}, Email: {users.Email} or Password: {users.Password} is incorrect");
             }
         }
     }
