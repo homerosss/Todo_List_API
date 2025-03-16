@@ -3,36 +3,29 @@
   <Class Name="Todo_List_API.BaseRegistration" Collapsed="true">
     <Position X="6.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAAgAAAAAAAAAAAAAAIAIAAAAAIAAIAA=</HashCode>
       <FileName>BaseRegistration.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Todo_List_API.Program" Collapsed="true">
-    <Position X="10.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Todo_List_API.RegistrationByEmail" Collapsed="true">
     <Position X="3.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAAgAAAAAAAAAABAAAAAIAAAAAIAAIAA=</HashCode>
       <FileName>RegistrationByEmail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Todo_List_API.RegistrationByID" Collapsed="true">
     <Position X="8.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAAgAAAAAAAAAABAAAAAIAAAAAIAAIAA=</HashCode>
       <FileName>RegistrationByID.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Todo_List_API.RegistrationByUsername" Collapsed="true">
     <Position X="6.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAQAAAAAAgAAAABAAAIAIAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAAgAAAAAAAAAABAAAAAIAAAAAIAAIAA=</HashCode>
       <FileName>RegistrationByUsername.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -46,7 +39,7 @@
   <Interface Name="Todo_List_API.IUserRegistration" Collapsed="true">
     <Position X="4" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>IUserRegistration.cs</FileName>
     </TypeIdentifier>
   </Interface>
