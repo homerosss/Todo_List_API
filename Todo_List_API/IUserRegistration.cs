@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Todo_List_API
 {
-    internal interface IUserRegistration
+    public interface IUserRegistration
     {
+         abstract void RegistrationSuccess(User username);
     }
 }

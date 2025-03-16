@@ -8,35 +8,35 @@ namespace Todo_List_API
 {
     internal class RegistrationByUsername : BaseRegistration
     {
-        private static User[]? _users; 
+        
         public RegistrationByUsername()
         {
-            _users = new User[10];
+
         }
 
-        public void RegistrationUsername(User username)
+        public override void RegistrationSuccess(User username)
         {
             if(username.Name == null) throw new ArgumentNullException("Username is null");
             if (username == null) throw new ArgumentNullException("Username is null");
             if (username.Name.Length == 0) throw new ArgumentException($"Username must be minimum 6 letters");
             if (IsFull()) throw new SemaphoreFullException("List is full");
-            if (UsernameExist(username.Name)) throw new ArgumentException("Username already exists");
+            if (UserIsExists(username.Name)) throw new ArgumentException("Username already exists");
 
             int index = GetEmptyIndex();
             _users[index] = username;
             Console.WriteLine("Registration Success");
         }
 
-        public bool UsernameExist(string username)
+        protected override bool UserIsExists(string? username)
         {
-            return GetIndexByUsername(username) != -1;
+            return GetIndexByUser(username) != -1;
         }
 
 
 
-        public static int GetIndexByUsername(string username)
+        protected override int GetIndexByUser(string? username)
         {
-            for(int i = 0; i < _users.Length; i++)
+            for(int i = 0; i < _users?.Length; i++)
             {
                 if (_users[i]?.Name == username)
                 {
@@ -46,14 +46,14 @@ namespace Todo_List_API
             return -1;
         }
 
-        public static User? GetUserByUsername(string username)
+        public User? GetUserByUsername(string? username)
         {
-            int index = GetIndexByUsername(username);
-            return index != -1 ? _users[index] : null;
+            int index = GetIndexByUser(username);
+            return index != -1 ? _users?[index] : null;
         }
-        private static int GetEmptyIndex()
+        protected override int GetEmptyIndex()
         {
-            for(int i = 0; i < _users.Length; i++)
+            for(int i = 0; i < _users?.Length; i++)
             {
                 if (_users[i] == null)
                 {
@@ -64,7 +64,7 @@ namespace Todo_List_API
             return -1;
         }
 
-        private bool IsFull()
+        protected override bool IsFull()
         {
             return GetEmptyIndex() == -1;
         }

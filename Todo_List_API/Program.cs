@@ -6,7 +6,6 @@
         {
             User user = new User(1,"homeross", "davit.makhareishvili@gmail.com", "davitaa");
             RegistrationByUsername registration = new RegistrationByUsername();
-            registration.RegistrationUsername(user);
         }
     }
 }
