@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Todo_List_API
 {
-    internal class RegistrationByEmail
+    internal class RegistrationByEmail : BaseRegistration
     {
         Dictionary<string, string> _emails;
 
