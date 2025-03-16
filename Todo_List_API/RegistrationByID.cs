@@ -8,5 +8,6 @@ namespace Todo_List_API
 {
     internal class RegistrationByID : BaseRegistration
     {
+        Dictionary<string, string> _registration = new Dictionary<string, string>();
     }
 }

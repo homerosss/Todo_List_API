@@ -8,5 +8,7 @@ namespace Todo_List_API
 {
     internal class RegistrationByEmail
     {
+        Dictionary<string, string> _emails;
+
     }
 }
