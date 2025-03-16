@@ -35,22 +35,15 @@ namespace Todo_List_API
         {
             foreach (var registered in _users)
             {
-                while(registered != null)
-                {
-                    if (registered.Name == users.Name)
-                    {
-
-                    }
-                }
                 if (registered.Name != users.Name)
                 {
                     throw new ArgumentException($"User with Name: {users.Name} can't found");
                 }
-                if(registered.Email != users.Email)
+                if (registered.Email != users.Email)
                 {
                     throw new ArgumentException($"User with Name: {users.Email} can't found");
                 }
-                if(registered.Password != users.Password)
+                if (registered.Password != users.Password)
                 {
                     throw new ArgumentException($"Password incorrect");
                 }
