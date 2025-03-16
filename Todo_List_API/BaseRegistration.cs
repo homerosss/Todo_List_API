@@ -12,7 +12,7 @@ namespace Todo_List_API
 
         public BaseRegistration()
         {
-
+            int x;
         }
 
         public abstract void RegistrationSuccess(User username);
