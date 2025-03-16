@@ -11,7 +11,7 @@ namespace Todo_List_API
         public static void Access(User user)
         {
             ValidateUser.IfUserRegistered(user);
-            Console.WriteLine("Welcome");
+            Console.WriteLine($"Welcome");
         }
     }
 }
