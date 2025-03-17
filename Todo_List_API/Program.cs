@@ -2,15 +2,17 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            User user = new User(1, "homeross", "davit.makhareishvili@gmail.com", "davitaa");
-            User user1 = new User(2, "homerosss", "davit.makhareishvili@mail.ru", "dato");
+            User user = new(1, "homeross", "davit.makhareishvili@gmail.com", "davitaa");
+            User user1 = new(2, "homeros", "daharhvili@mail.ru", "dato");
 
-            Registration.RegistrationSuccess(user1);
-            UserLogin.Access(user1);
-            Registration.RegistrationSuccess(user);
-            UserLogin.Access(user);
+
+            UserManager.Registration(user);
+            UserLogin.Approve(user);
+            UserManager.Registration(user1);
+            UserLogin.Approve(user1);
+      
         }
     }
 }

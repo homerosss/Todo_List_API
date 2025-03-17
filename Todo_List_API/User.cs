@@ -15,10 +15,10 @@ namespace Todo_List_API
 
         public User()
         {
-            
+
         }
 
-        public User(int id, string? name, string? email, string? password) : this ()
+        public User(int id, string? name, string? email, string? password) : this()
         {
             Id = id;
             Name = name;

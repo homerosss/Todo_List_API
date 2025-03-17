@@ -6,4 +6,7 @@ using System.Threading.Tasks;
 
 namespace Todo_List_API
 {
+    internal class UserToDoList : UserManager
+    {
+    }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Todo_List_API
 {
-    public class ValidateUser : Registration
+    public class ValidateUser : UserManager
     {
         public static void IfExists(User user)
         {
